@@ -1,0 +1,23 @@
+{
+  "name": "metronomejs",
+  "homepage": "https://github.com/luizpaulo165/metronomejs",
+  "authors": [
+    "Luiz Paulo Valença <luizpaulo165@gmail.com>"
+  ],
+  "description": "Metronome Js",
+  "main": "",
+  "keywords": [
+    "metronome",
+    "js",
+    "time",
+    "training"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

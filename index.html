@@ -2,108 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Metronome</title>
+    <title>Metronomejs</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/metronomejs.css" media="screen" title="no title">
   </head>
   <body>
-      <audio id="bit">
-        <source src="bit24.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-      <audio id="bit-2">
-        <source src="bit24-2.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-      <div id="metronome">
-        <span id="timer">40</span><br />
-        <input id="metronome-value" type="range" min="40" max="220" value="60" oninput="showValue(this.value)" />
-        <button id="play" type="button" name="button" onclick="playBit()">play</button>
-        <button id="stop" type="button" name="button" onclick="stopBit()" style="display:none;">stop</button>
+      <div id="wrap-metronomejs">
+        <div id="metronomejs"></div>
       </div>
 
-      <script type="text/javascript">
-        var triggerAudio = false;
-        var callTime;
-        var timeBit = document.getElementById('metronome-value');
-        var timeBitVal = timeBit.value;
-        var count = 0;
-        var player = document.getElementById('bit');
-        var player2 = document.getElementById('bit-2');
-        var playButton = document.getElementById('play')
-        var stopButton = document.getElementById('stop')
-
-        var calc = parseInt(60000 / timeBitVal);
-
-        function showValue(newValue){
-          document.getElementById('timer').innerHTML = newValue;
-        }
-        showValue(timeBitVal)
-
-        timeBit.onchange = function() {
-          var self = this;
-          var selVal = self.value;
-
-          changeNewValue(selVal)
-        }
-
-        function changeNewValue(newValue){
-          timeBitVal = document.getElementById('metronome-value').value;
-
-          calc = parseInt(60000 / newValue);
-
-          stopBit()
-
-          // callTime = setInterval(function(){
-          //   bitTime()
-          // }, calc)
-        }
-
-        function playBit(){
-          triggerAudio = true;
-          callTime = setInterval(function(){
-            bitTime()
-          }, calc)
-
-          playButton.style.display = 'none';
-          stopButton.style.display = 'inline-block';
-
-        }
-
-        function stopBit(){
-          triggerAudio = false;
-          count = 0;
-
-          player.pause();
-          player.currentTime = 0;
-          player2.pause();
-          player2.currentTime = 0;
-
-          clearInterval(callTime)
-
-          playButton.style.display = 'inline-block';
-          stopButton.style.display = 'none';
-
-        }
-
-        function bitTime(){
-          count += 1;
-
-          if (count == 5) {
-            count = 1;
-          }
-
-          if (count == 4) {
-            player2.play()
-            player.pause();
-            player.currentTime = 0;
-          } else {
-            player.play();
-            player2.pause();
-            player2.currentTime = 0;
-          }
-
-          triggerAudio = true;
-        }
-
-      </script>
+      <script type="text/javascript" src="dist/js/metronomejs.js"></script>
   </body>
 </html>
