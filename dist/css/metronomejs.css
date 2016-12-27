@@ -1,0 +1,149 @@
+#wrap-metronomejs{
+  text-align:center;
+  font-family: 'Oswald', sans-serif;
+  background: #222;
+  padding:10px;
+}
+
+#metronomejs{
+  display:inline-block;
+}
+
+#timer{
+  text-align:center;
+  font-size:15px;
+  color:#ccc;
+  min-width:80px;
+  display:inline-block;
+  position:relative;
+  margin-right:20px;
+  top:5px;
+}
+
+#timer #set-timer{
+  text-align:center;
+  color:#ccc;
+  font-size:30px;
+  background:0;
+  width:70px;
+  border:0;
+}
+
+.bt-metronome{
+  text-indent:-999em;
+  font-size:0;
+  line-height:55px;
+  width:38px;
+  height:38px;
+  border:0;
+  margin-left:20px;
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  cursor:pointer;
+}
+
+.bt-metronome:hover{
+  background-color:#444;
+}
+
+#play{
+  background:#333333 url('../../play.svg') no-repeat 53% center / 12px;
+}
+#stop{
+  background:#333333 url('../../stop.svg') no-repeat center center / 8px;
+}
+
+#play:hover,
+#stop:hover{
+  background-color:#444;
+}
+
+
+#metronome-value {
+  margin: 10px 0;
+  position:relative;
+  top:-7px;
+  -webkit-appearance: none;
+}
+#metronome-value:focus {
+  outline: none;
+}
+#metronome-value::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #333333;
+  border-radius: 0px;
+  border: 0px solid #000000;
+}
+#metronome-value::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #FFFFFF;
+  border: 0px solid #FFFFFF;
+  height: 16px;
+  width: 15px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6.5px;
+}
+#metronome-value:focus::-webkit-slider-runnable-track {
+  background: #333333;
+}
+#metronome-value::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #333333;
+  border-radius: 0px;
+  border: 0px solid #000000;
+}
+#metronome-value::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #FFFFFF;
+  border: 0px solid #FFFFFF;
+  height: 16px;
+  width: 15px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+#metronome-value::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+#metronome-value::-ms-fill-lower {
+  background: #333333;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+#metronome-value::-ms-fill-upper {
+  background: #333333;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #000000;
+}
+#metronome-value::-ms-thumb {
+  box-shadow: 0px 0px 0px #FFFFFF;
+  border: 0px solid #FFFFFF;
+  height: 16px;
+  width: 15px;
+  border-radius: 50px;
+  background: #FFFFFF;
+  cursor: pointer;
+}
+#metronome-value:focus::-ms-fill-lower {
+  background: #333333;
+}
+#metronome-value:focus::-ms-fill-upper {
+  background: #333333;
+}
