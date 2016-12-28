@@ -2,10 +2,10 @@
 var elements = '\
   <audio id="bit"><source src="bit.mp3" type="audio/mpeg"></audio> \
   <audio id="bit-2"><source src="bit.mp3" type="audio/mpeg"></audio> \
-  <span id="timer"><input id="set-timer" value=""> bpm</span> \
-  <input id="metronome-value" type="range" min="40" max="220" value="60" oninput="showValue(this.value)" /> \
   <button id="play" class="bt-metronome" type="button" name="button" onclick="playBit()">play</button> \
   <button id="stop" class="bt-metronome" type="button" name="button" onclick="stopBit()" style="display:none;">stop</button> \
+  <input id="metronome-value" type="range" min="40" max="220" value="60" oninput="showValue(this.value)" /> \
+  <span id="timer"><input type="number" id="set-timer" value=""> bpm</span> \
 '
 document.getElementById('metronomejs').innerHTML = elements;
 
